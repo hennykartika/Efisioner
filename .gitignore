@@ -1,0 +1,30 @@
+# 🔒 File konfigurasi yang bersifat sensitif
+conn.php
+.env
+
+# 💻 Folder konfigurasi dari text editor
+.vscode/
+.idea/
+
+# 🧹 File sementara dari sistem operasi
+.DS_Store
+Thumbs.db
+
+# 🗂️ File backup/log/temp yang tidak perlu dilacak
+*.log
+*.tmp
+*.bak
+*.swp
+
+# 📁 Vendor (jika nanti pakai Composer)
+vendor/
+
+# 📦 Output / backup database (jika tidak ingin disimpan di Git)
+*.sql
+
+# 📄 Export hasil (jika tidak perlu di-track)
+*.pdf
+*.xlsx
+
+# 📜 Cache browser atau server (opsional)
+*.cache
