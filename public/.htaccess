@@ -1,0 +1,16 @@
+Options -Indexes -MultiViews
+
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Hidden files are never served; .well-known stays reachable for TLS certificates.
+    RewriteRule (^|/)\.(?!well-known/) - [F,L]
+
+    # Everything that is not a real file goes through the front controller.
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

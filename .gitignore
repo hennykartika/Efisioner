@@ -1,0 +1,22 @@
+# Dependencies
+/vendor/
+
+# Local configuration and secrets
+/.env
+/.env.*
+!/.env.example
+
+# Tooling
+/.phpunit.cache/
+/.phpunit.result.cache
+
+# Editors and OS files
+/.idea/
+/.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs and database dumps
+*.log
+/database/dumps/

@@ -1,0 +1,8 @@
+# Safety net for hosts where the document root cannot be pointed at public/.
+# Nothing outside public/ (config, source, .env, database dumps) is ever served.
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Deny from all
+</IfModule>
